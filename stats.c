@@ -67,6 +67,8 @@ int main(void) {
     }
 
     // TODO: print all the items entered here:
+    for(int j = 0; j < filled; j+=1) {
+      printf("entry[%d]=%f\n",j, entries[j]);
   }
 }
 
