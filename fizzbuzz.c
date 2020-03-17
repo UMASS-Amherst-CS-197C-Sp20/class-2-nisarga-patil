@@ -17,7 +17,28 @@ int main(void) {
   // Demonstrate file I/O.
   fprintf(out, "This doesn't work yet!\n");
 
-  // We need to close the file we're writing to, otherwise we may lose data.
+  for ( int i = 0; i < 101; i++ ) {
+         if ( i % 3 == 0 && i % 5 == 0 ) {
+            fprintf(out, "FizzBuzz\n");
+           } 
+        else if ( i % 3 == 0 && i % 5 != 0 ) {
+            fprintf(out, "Fizz\n");
+          } 
+         else if ( i % 3 != 0 && i % 5 ==0 ) {
+	    fprintf(out, "Buzz\n");
+          }
+        else {
+             fprintf(out,"%d", i);
+             fprintf(out, "\n");
+
+             }
+
+
+}  
+
+
+
+// We need to close the file we're writing to, otherwise we may lose data.
   fclose(out);
   // Tell the shell/terminal that we were successful.
   return 0;
